@@ -10,5 +10,6 @@ def post_register(request):
         reg.email = request.POST['email']
         reg.phone_number = request.POST['area_code'] + request.POST['phone']
         reg.subject = request.POST['subject']
+        reg.exist = request.POST['exist']
         reg.save()
     return render(request, 'index.html')
